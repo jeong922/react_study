@@ -1,20 +1,34 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { getMovies } from '../api/api';
 import { useInfiniteQuery } from 'react-query';
 
 const imageUrl = 'https://image.tmdb.org/t/p/w500';
 
 export default function List() {
-  const { data, fetchNextPage, hasNextPage, isFetching, isFetchingNextPage } =
-    useInfiniteQuery('projects', getMovies, {
-      getNextPageParam: (lastPage, pages) => {
-        if (pages.length < 5) {
-          return pages.length + 1;
-        } else {
-          return undefined;
+  const pageEnd = useRef();
+  const { data, fetchNextPage } = useInfiniteQuery('projects', getMovies, {
+    getNextPageParam: (lastPage, pages) => {
+      if (pages.length < 5) {
+        return pages.length + 1;
+      } else {
+        return undefined;
+      }
+    },
+  });
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          fetchNextPage();
         }
       },
-    });
+      { threshold: 1 }
+    );
+    observer.observe(pageEnd.current);
+    return () => observer.disconnect();
+  }, [fetchNextPage]);
+
   return (
     <div>
       <ul className='grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'>
@@ -32,16 +46,7 @@ export default function List() {
           </React.Fragment>
         ))}
       </ul>
-      <div>
-        <button
-          className='w-full p-3 text-white bg-blue-950'
-          onClick={fetchNextPage}
-          disabled={!hasNextPage}
-        >
-          load more
-        </button>
-      </div>
-      <div>{isFetching && !isFetchingNextPage ? 'Fetching...' : null}</div>
+      <div ref={pageEnd}></div>
     </div>
   );
 }
