@@ -10,6 +10,7 @@ export async function getMovies({ pageParam }) {
 }
 
 export async function getTv(page) {
+  console.log(page);
   const response = await fetch(
     `${BASE_PATH}/tv/top_rated?api_key=${API_KEY}&language=ko&page=${page}`
   );
