@@ -8,3 +8,11 @@ export async function getMovies({ pageParam }) {
   const result = await response.json();
   return result;
 }
+
+export async function getTv(page) {
+  const response = await fetch(
+    `${BASE_PATH}/tv/top_rated?api_key=${API_KEY}&language=ko&page=${page}`
+  );
+  const result = await response.json();
+  return result;
+}
