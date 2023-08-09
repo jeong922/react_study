@@ -4,6 +4,7 @@ import List from './components/List';
 import List2 from './components/List2';
 import PaginatedList from './components/PaginatedList';
 import PaginatedList2 from './components/PaginatedList2';
+import PaginatedList3 from './components/PaginatedList3';
 const queryClient = new QueryClient();
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
         {/* <List /> */}
         {/* <List2 /> */}
         {/* <PaginatedList /> */}
-        <PaginatedList2 />
+        {/* <PaginatedList2 /> */}
+        <PaginatedList3 />
       </div>
     </QueryClientProvider>
   );
