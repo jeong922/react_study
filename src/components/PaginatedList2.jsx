@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { getTv } from '../api/api';
+import { imageUrl } from '../util/util';
 
 // 이렇게 해도 되는건가...?
-
-const imageUrl = 'https://image.tmdb.org/t/p/w500';
 
 export default function PaginatedList2() {
   const [data, setData] = useState([]);

@@ -11,11 +11,11 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className='w-full max-w-screen-xl p-2 mx-auto'>
-        {/* <List /> */}
+        <List />
         {/* <List2 /> */}
         {/* <PaginatedList /> */}
         {/* <PaginatedList2 /> */}
-        <PaginatedList3 />
+        {/* <PaginatedList3 /> */}
       </div>
     </QueryClientProvider>
   );

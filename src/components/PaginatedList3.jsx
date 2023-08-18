@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { useQueries } from 'react-query';
 import { getMovie2 } from '../api/api';
 import Pagination from './Pagination';
-
-const imageUrl = 'https://image.tmdb.org/t/p/w500';
+import { imageUrl } from '../util/util';
 
 export default function PaginatedList3() {
   const results = useQueries([

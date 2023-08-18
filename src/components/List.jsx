@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { getMovies } from '../api/api';
 import { useInfiniteQuery } from 'react-query';
-
-const imageUrl = 'https://image.tmdb.org/t/p/w500';
+import PosterImage from './PosterImage';
 
 export default function List() {
   const pageEnd = useRef();
@@ -36,11 +35,7 @@ export default function List() {
           <React.Fragment key={i}>
             {group.results.map((movie) => (
               <li key={movie.id} className='text-center'>
-                <img
-                  src={`${imageUrl + movie.poster_path}`}
-                  alt={movie.title}
-                />
-                <span className='text-lg font-semibold'>{movie.title}</span>
+                <PosterImage movie={movie} />
               </li>
             ))}
           </React.Fragment>

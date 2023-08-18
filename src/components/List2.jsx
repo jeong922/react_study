@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { getTv } from '../api/api';
-
-const imageUrl = 'https://image.tmdb.org/t/p/w500';
+import { imageUrl } from '../util/util';
 
 export default function List2() {
   const pageEnd = useRef();

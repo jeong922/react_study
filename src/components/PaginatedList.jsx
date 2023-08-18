@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { getTv } from '../api/api';
 import { useQuery } from 'react-query';
+import { imageUrl } from '../util/util';
 
-const imageUrl = 'https://image.tmdb.org/t/p/w500';
+// const imageUrl = 'https://image.tmdb.org/t/p/w500';
 
 export default function PaginatedList() {
   const [page, setPage] = useState(1);
