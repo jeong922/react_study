@@ -22,11 +22,14 @@ export default function PosterImage({ movie }) {
   return (
     <div>
       <img
+        className='bg-neutral-400 aspect-[7/10]'
         ref={imgRef}
         data-src={`${imageUrl + movie.poster_path}`}
         alt={movie.title}
       />
-      <span className='text-lg font-semibold'>{movie.title}</span>
+      <span className='text-lg font-semibold dark:text-white'>
+        {movie.title}
+      </span>
     </div>
   );
 }

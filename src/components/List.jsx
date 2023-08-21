@@ -3,6 +3,7 @@ import { getMovies } from '../api/api';
 import { useInfiniteQuery } from 'react-query';
 import PosterImage from './PosterImage';
 import Loading from './Loading';
+import ThemeButton from './ThemeButton';
 
 export default function List() {
   const pageEnd = useRef();
@@ -34,7 +35,10 @@ export default function List() {
   }, [fetchNextPage]);
 
   return (
-    <div>
+    <>
+      <div className='p-3'>
+        <ThemeButton />
+      </div>
       {status === 'loading' && (
         <div className='fixed top-0 left-0 flex items-center justify-center w-full h-screen bg-white'>
           <Loading width={16} height={16} />
@@ -54,6 +58,6 @@ export default function List() {
       <div className='my-4 text-center' ref={pageEnd}>
         {isFetchingNextPage && <Loading width={9} height={9} />}
       </div>
-    </div>
+    </>
   );
 }
