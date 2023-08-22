@@ -28,7 +28,7 @@ export default function PaginatedList3() {
           {data.slice(offset, offset + limit).map((tv) => (
             <li key={tv.id} className='text-center'>
               <img
-                src={`${imageUrl + (tv.poster_path || tv.backdrop_path)}`}
+                src={`${imageUrl(tv.poster_path || tv.backdrop_path)}`}
                 alt={tv.title}
               />
               <span className='text-lg font-semibold'>{tv.title}</span>

@@ -48,7 +48,7 @@ export default function List() {
         {data?.pages.map((group, i) => (
           <React.Fragment key={i}>
             {group.results.map((movie) => (
-              <li key={movie.id} className='text-center'>
+              <li key={movie.id} className='text-center cursor-pointer'>
                 <PosterImage movie={movie} />
               </li>
             ))}

@@ -27,7 +27,7 @@ export default function PaginatedList2() {
         {data?.map((tv, index) => (
           <li key={tv.id} className='text-center'>
             <img
-              src={`${imageUrl + (tv.poster_path || tv.backdrop_path)}`}
+              src={`${imageUrl(tv.poster_path || tv.backdrop_path)}`}
               alt={tv.name}
             />
             <span className='text-lg font-semibold'>{tv.name}</span>

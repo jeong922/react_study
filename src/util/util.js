@@ -1,1 +1,3 @@
-export const imageUrl = 'https://image.tmdb.org/t/p/w500';
+export function imageUrl(id, format) {
+  return `https://image.tmdb.org/t/p/${format ? format : 'original'}/${id}`;
+}
