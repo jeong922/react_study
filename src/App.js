@@ -6,6 +6,7 @@ import PaginatedList from './components/PaginatedList';
 import PaginatedList2 from './components/PaginatedList2';
 import PaginatedList3 from './components/PaginatedList3';
 import { DarkModeProvider } from './context/DarkModeContext';
+import Carousel1 from './components/slide/Carousel1';
 const queryClient = new QueryClient();
 
 function App() {
@@ -13,12 +14,13 @@ function App() {
     <DarkModeProvider>
       <div className='w-full dark:bg-gray-900 bg-neutral-50'>
         <QueryClientProvider client={queryClient}>
-          <div className='w-full max-w-screen-xl p-2 mx-auto'>
-            <List />
+          <div className='w-full p-2'>
+            {/* <List /> */}
             {/* <List2 /> */}
             {/* <PaginatedList /> */}
             {/* <PaginatedList2 /> */}
             {/* <PaginatedList3 /> */}
+            <Carousel1 />
           </div>
         </QueryClientProvider>
       </div>

@@ -19,7 +19,7 @@ export default function Modal({ showModal, onClose, children }) {
 
   return (
     <section
-      className='fixed top-0 left-0 z-50 w-full h-full overflow-y-scroll bg-black/70 '
+      className='fixed top-0 left-0 z-[9999] w-full h-full overflow-y-scroll bg-black/70 '
       onClick={(e) => {
         console.log(e.target === e.currentTarget);
         if (e.target === e.currentTarget) {
