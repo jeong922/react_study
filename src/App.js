@@ -7,6 +7,7 @@ import PaginatedList2 from './components/PaginatedList2';
 import PaginatedList3 from './components/PaginatedList3';
 import { DarkModeProvider } from './context/DarkModeContext';
 import Carousel1 from './components/slide/Carousel1';
+import Carousel2 from './components/slide/Carousel2.jsx/Carousel2';
 const queryClient = new QueryClient();
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
             {/* <PaginatedList /> */}
             {/* <PaginatedList2 /> */}
             {/* <PaginatedList3 /> */}
-            <Carousel1 />
+            {/* <Carousel1 /> */}
+            <Carousel2 />
           </div>
         </QueryClientProvider>
       </div>
