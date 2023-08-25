@@ -27,16 +27,13 @@ export default function BgImage({ movie }) {
 
   return (
     <>
-      <div onClick={() => setShowModal(true)}>
+      <div onClick={() => setShowModal(true)} className='w-full h-full'>
         <img
-          className='w-full bg-neutral-400'
+          className='object-cover w-full h-full bg-neutral-400'
           ref={imgRef}
           data-src={`${imageUrl(movie.backdrop_path, 'w500')}`}
           alt={movie.title}
         />
-        <span className='text-lg font-semibold dark:text-white'>
-          {movie.title}
-        </span>
       </div>
       {showModal && (
         <ModalPortal>

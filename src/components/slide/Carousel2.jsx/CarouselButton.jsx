@@ -1,6 +1,6 @@
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md';
 
-export default function CarouselButton({ direction, onClick, padding }) {
+export default function CarouselButton({ direction, onClick }) {
   return (
     <button
       onClick={onClick}
