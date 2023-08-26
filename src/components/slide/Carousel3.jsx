@@ -11,16 +11,13 @@ export default function Carousel3() {
   const [slideIndex, setSlideIndex] = useState(0);
   const [itemPerScreen, setItemPerScreen] = useState(6);
   const itemCount = Math.ceil(ITEM_LENGTH / itemPerScreen);
-  console.log('itemCount', itemCount);
-  console.log('slideIndex', slideIndex);
-  console.log(-100 * slideIndex);
 
   const slideHandler = (derection) => {
     if (slideIndex + derection < 0) {
       return;
     }
 
-    if (slideIndex + derection > ITEM_LENGTH - itemPerScreen) {
+    if (slideIndex + derection >= itemCount) {
       return;
     }
 
@@ -76,7 +73,9 @@ export default function Carousel3() {
             <div
               className='flex transition-all duration-500 ease-in-out'
               style={{
-                transform: `translateX(${(-100 / ITEM_LENGTH) * slideIndex}%)`,
+                transform: `translateX(${
+                  (-100 / ITEM_LENGTH) * itemPerScreen * slideIndex
+                }%)`,
               }}
             >
               {data.map((item, index) => (

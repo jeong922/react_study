@@ -1,13 +1,6 @@
 import { QueryClient, QueryClientProvider } from 'react-query';
 import './App.css';
-import List from './components/List';
-import List2 from './components/List2';
-import PaginatedList from './components/PaginatedList';
-import PaginatedList2 from './components/PaginatedList2';
-import PaginatedList3 from './components/PaginatedList3';
 import { DarkModeProvider } from './context/DarkModeContext';
-import Carousel1 from './components/slide/Carousel1';
-import Carousel2 from './components/slide/Carousel2.jsx/Carousel2';
 import Carousel3 from './components/slide/Carousel3';
 const queryClient = new QueryClient();
 
