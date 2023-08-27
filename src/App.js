@@ -2,6 +2,8 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import './App.css';
 import { DarkModeProvider } from './context/DarkModeContext';
 import Carousel3 from './components/slide/Carousel3';
+import Carousel2 from './components/slide/Carousel2';
+import List from './components/List';
 const queryClient = new QueryClient();
 
 function App() {
@@ -16,8 +18,8 @@ function App() {
             {/* <PaginatedList2 /> */}
             {/* <PaginatedList3 /> */}
             {/* <Carousel1 /> */}
-            {/* <Carousel2 /> */}
-            <Carousel3 />
+            <Carousel2 />
+            {/* <Carousel3 /> */}
           </div>
         </QueryClientProvider>
       </div>

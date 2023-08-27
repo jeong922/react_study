@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
 import { getMovie2 } from '../../api/api';
 import BgImage from '../BgImage';
-import CarouselButton from './Carousel2.jsx/CarouselButton';
+import CarouselButton from './CarouselButton';
 
 export default function Carousel3() {
   const { data } = useQuery(['movie'], () => getMovie2(1));
