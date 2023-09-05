@@ -4,6 +4,8 @@ import { useState } from 'react';
 import CarouselButton from './CarouselButton';
 import BgImage from '../BgImage';
 
+// 수정필요..!!
+
 export default function Carousel() {
   const { data } = useQuery(['movie'], () => getMovie2(1));
   const ITEM_LENGTH = data?.length;

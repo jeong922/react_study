@@ -18,7 +18,7 @@ function App() {
             {/* <PaginatedList2 /> */}
             {/* <PaginatedList3 /> */}
             {/* <Carousel1 /> */}
-            <Carousel2 />
+            {/* <Carousel2 /> */}
             {/* <Carousel3 /> */}
           </div>
         </QueryClientProvider>
