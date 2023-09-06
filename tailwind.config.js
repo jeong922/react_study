@@ -3,7 +3,21 @@ module.exports = {
   content: ['./src/**/*.{js,jsx}'],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        blink: {
+          '0%, 100%': {
+            borderRight: '3px solid rgb(229, 229, 229)',
+          },
+          '50%': {
+            borderRight: '3px solid transparent',
+          },
+        },
+      },
+      animation: {
+        blink: 'blink 1.2s infinite',
+      },
+    },
   },
   plugins: [],
 };
