@@ -18,7 +18,7 @@ function useInterval(callback, delay) {
   }, [delay]);
 }
 
-export default function Typing({ typingText, size }) {
+export function Typing({ typingText }) {
   const str = typingText;
   const [text, setText] = useState('');
   const [count, setCount] = useState(0);
@@ -30,7 +30,6 @@ export default function Typing({ typingText, size }) {
 
     setText((prev) => {
       let result = prev ? prev + str[count] : str[0];
-
       setCount(count + 1);
 
       return result;

@@ -1,11 +1,9 @@
 import { QueryClient, QueryClientProvider } from 'react-query';
 import './App.css';
 import { DarkModeProvider } from './context/DarkModeContext';
-import Carousel3 from './components/slide/Carousel3';
-import Carousel2 from './components/slide/Carousel2';
-import List from './components/List';
-import Typing from './components/Typing';
 import ThemeButton from './components/ThemeButton';
+import { Typing } from './components/Typing';
+
 const queryClient = new QueryClient();
 
 function App() {
@@ -15,14 +13,6 @@ function App() {
         <QueryClientProvider client={queryClient}>
           <div className='w-full p-2'>
             <ThemeButton />
-            {/* <List /> */}
-            {/* <List2 /> */}
-            {/* <PaginatedList /> */}
-            {/* <PaginatedList2 /> */}
-            {/* <PaginatedList3 /> */}
-            {/* <Carousel1 /> */}
-            {/* <Carousel2 /> */}
-            {/* <Carousel3 /> */}
             <Typing typingText='Hello world!' />
           </div>
         </QueryClientProvider>
