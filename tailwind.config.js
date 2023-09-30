@@ -13,9 +13,18 @@ module.exports = {
             borderRight: '3px solid transparent',
           },
         },
+        blinkB: {
+          '0%, 100%': {
+            borderRight: '3px solid black',
+          },
+          '50%': {
+            borderRight: '3px solid transparent',
+          },
+        },
       },
       animation: {
         blink: 'blink 1.2s infinite',
+        blinkB: 'blinkB 1.2s infinite',
       },
     },
   },

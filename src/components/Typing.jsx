@@ -38,7 +38,7 @@ export function Typing({ typingText }) {
 
   return (
     <>
-      <span className='text-5xl tracking-wide text-white animate-blink'>
+      <span className='text-5xl tracking-wide dark:text-white animate-blinkB dark:animate-blink'>
         {text}
       </span>
     </>
